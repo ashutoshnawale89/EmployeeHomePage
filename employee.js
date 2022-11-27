@@ -65,17 +65,15 @@ const getSelectedValues = (propertyValue) => {
 
 
 function createAndUpdateStorage(employeePayrollData){
-    let employeePayrollList = JSON.parse(localStorage.getItem("employeePeyrollList"));
-
+    let employeePayrollList = JSON.parse(localStorage.getItem("employeePayrollList"));
     if(employeePayrollList != undefined){
         employeePayrollList.push(employeePayrollData);
     }
     else{
         employeePayrollList = [employeePayrollData];
     }
-
     alert(employeePayrollList.toString());
-    localStorage.setItem("employeePeyrollList",JSON.stringify(employeePayrollList));
+    localStorage.setItem("employeePayrollList",JSON.stringify(employeePayrollList));
 }
 
 const resetForm = () => {
@@ -87,7 +85,8 @@ const resetForm = () => {
     setValue('#notes',''); 
     setValue('#day','1'); 
     setValue( '#month', 'January'); 
-    setValue('#year', '2020');}
+    setValue('#year', '2020');
+}
 
 const unsetSelectedValues = (propertyValue) => {
     let allItems = document.querySelectorall(propertyValue); 

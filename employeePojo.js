@@ -2,28 +2,28 @@ class EmployeePayRollData{
 
     get id()
     {
-        return this._id;
+        return this.id;
     }
 
     set id(id)
     {
         let idRegex = RegExp('[1-9]{1}[0-9]*');
         if(idRegex.test(id))
-        this._id = id;
+        this.id = id;
         else
         throw 'Id is incorrect';
     }
 
     get name()
     {
-        return this._name;
+        return this.name;
     }
 
     set name(name)
     {
         let nameRegex = RegExp('^[A-Z]{1}[a-zA-Z\\s]{2,}$');
         if(nameRegex.test(name))
-        this._name = name;
+        this.name = name;
         else 
         throw 'Name is incorrect';
     }
@@ -35,52 +35,52 @@ class EmployeePayRollData{
 
     set profilePic(profilePic)
     {
-        this._profilePic = profilePic;
+        this.profilePic = profilePic;
     }
 
     get gender()
     {
-        return this._gender;
+        return this.gender;
     }
 
     set gender(gender)
     {
-        this._gender = gender;
+        this.gender = gender;
     }
 
     get department()
     {
-        return this._department;
+        return this.department;
     }
 
     set department(department)
     {
-        this._department = department;
+        this.department = department;
     }
 
     get salary()
     {
-        return this._salary;
+        return this.salary;
     }
 
     set salary(salary)
     {
-        this._salary = salary;
+        this.salary = salary;
     }
 
     get note()
     {
-        return this._note;
+        return this.note;
     }
 
     set note(note)
     {
-        this._note = note;
+        this.note = note;
     }
 
     get startDate()
     {
-        return this._startDate;
+        return this.startDate;
     }
 
     set startDate(startDate)
@@ -88,7 +88,7 @@ class EmployeePayRollData{
         let datee = new Date();
         if(startDate<=datee)
         {
-        this._startDate = startDate;
+        this.startDate = startDate;
         }
         else
         throw 'StratDate is incorrect';
